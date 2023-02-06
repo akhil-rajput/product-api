@@ -26,7 +26,7 @@ public class CustomUserDetailService implements UserDetailsService {
 
 		User user = userDao.findByUsername(username);
 		if (user == null) {
-			throw new UsernameNotFoundException("User not found with username: " + username);
+			throw new UsernameNotFoundException("User not found with username:--->" + username);
 		}
 		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
 				new ArrayList<>());
